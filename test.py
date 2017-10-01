@@ -27,3 +27,5 @@ tbls = [
    table.table(r, align=["<", "^", ">"]),
    table.table(r, title="Favourite Games", talign=table.alignment.RIGHT)
 ]
+
+tbls[0].display()
