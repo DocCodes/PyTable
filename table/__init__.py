@@ -7,7 +7,7 @@ __copyright__ = 'Copyright 2017, Evan Young'
 __credits__ = 'Evan Young'
 
 __license__ = 'GNU GPLv3'
-__version__ = '0.1.24'
+__version__ = '0.1.25'
 __maintainer__ = 'Evan Young'
 __status__ = 'Alpha'
 
@@ -63,7 +63,7 @@ class table:
          self.align = [align for i in range(len(self.rows))]
       else:
          self.align = align
-      self.collen = [max([len(x[i])+padding for x in self.rows]) for i in range(len(self.rows[0]))]
+      self.collen = [max([len(x[i])+hpad for x in self.rows]) for i in range(len(self.rows[0]))]
       
       self.title = title
       self.talign = talign
