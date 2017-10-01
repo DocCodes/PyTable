@@ -4,7 +4,7 @@ from distutils.core import setup
 setup(
    name = 'PyTable',
    packages = ['table'],
-   version = '0.1.23',
+   version = '0.1.24',
    description = 'A table module for python',
    author = 'Evan Young',
    url = 'https://github.com/DocCodes/PyTable',

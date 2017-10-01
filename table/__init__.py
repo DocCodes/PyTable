@@ -7,7 +7,7 @@ __copyright__ = 'Copyright 2017, Evan Young'
 __credits__ = 'Evan Young'
 
 __license__ = 'GNU GPLv3'
-__version__ = '0.1.23'
+__version__ = '0.1.24'
 __maintainer__ = 'Evan Young'
 __status__ = 'Alpha'
 
@@ -24,7 +24,7 @@ class table:
    
    The table object, supports rows, formatting, delimiters, an borders
    """
-   def __init__(self, rows, align="default", delim=" ", colbd="|", rowbd="-", title="", talign=alignment.CENTER, padding=1):
+   def __init__(self, rows, align="default", delim=" ", colbd="|", rowbd="-", title="", talign=alignment.CENTER, hpad=1, vpad=0):
       """The main function
       
       Does all the heavy lifting
@@ -39,14 +39,20 @@ class table:
          rowbd   {str}   -- The row border                                         (default: {"-"})
          title   {str}   -- The table's title                                      (default: {""})
          talign  {str}   -- The table's title alignment                            (default: {alignment.CENTER})
-         padding {int}   -- The spacing between each cell                          (default: {1})
+         hpad    {int}   -- The horizontal spacing between each cell               (default: {1})
+         vpad    {int}   -- The vertical spacing between each cell                 (default: {0})
       """
 
       """About the self (lbl)
 
       Converts the items in rows to strings
+      If the alignment is untouched
       The headers are centered
       Every other item is lefted
+      Elif the alignment variable pertains to the columns
+      Apply the alignment to each cell in the columns
+      Elif the alignment variable pertains to each cell
+      Apply the alignment to each cell
       The maximum length of each column is determined
       """
       self.rows = [[str(x) for x in r] for r in rows]
@@ -64,6 +70,8 @@ class table:
       self.delim = delim
       self.colbd = colbd
       self.rowbd = rowbd
+      self.hpad = hpad
+      self.vpad = vpad
 
       self.realen = sum(self.collen)+len(self.collen)+len(self.colbd)
 
@@ -87,19 +95,29 @@ class table:
       Select the text of the cell
       Get the format (delimiter, align, spacing) of the cell
       Print the cell
+      Print the cell border end
+      Print vertical padding
       If the rowbd isn't empty
       Print the rowbd with the correct length
       Otherwise, line-feed
       """
+      colemp = "|"
+      for i in range(len(self.rows[0])):
+         colemp += f"{' '*self.collen[i]}|"
+      colemp += "\n"
+
       for rowind in range(len(self.rows)):
          row = self.rows[rowind]
+         print(colemp*self.vpad, end="")
          for strind in range(len(row)):
             txt = row[strind]
             fstr = f"{self.delim}{self.align[rowind][strind]}{self.collen[strind]}"
             print(f"{self.colbd}{txt:{fstr}}", end="")
 
+         print(self.colbd)
+         print(colemp*self.vpad, end="")
          if(self.rowbd != ""):
-            print(f"{self.colbd}\n{self.rowbd*self.realen}")
+            print(f"{self.rowbd*self.realen}")
          else:
             print()
 

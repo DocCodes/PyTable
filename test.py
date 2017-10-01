@@ -13,19 +13,21 @@ r = [
 0  --  Default formatting
 1  --  No column borders
 2  --  No row borders
-3  --  More padding
+3  --  More horizontal padding
 4  --  Different alignments
 5  --  Shorthand alignment (same alignment for all cells in a column)
 6  --  New feature, title!
+7  --  More vertical padding
 """
 tbls = [
    table.table(r),
    table.table(r, colbd=""),
    table.table(r, rowbd=""),
-   table.table(r, padding=5),
+   table.table(r, hpad=5),
    table.table(r, align=[["^", "^", "^"], ["<", "^", ">"], ["<", "^", ">"], ["<", "^", ">"], ["<", "^", ">"]]),
-   table.table(r, align=["<", "^", ">"]),
-   table.table(r, title="Favourite Games", talign=table.alignment.RIGHT)
+   table.table(r, align=[table.alignment.LEFT, table.alignment.CENTER, table.alignment.RIGHT]),
+   table.table(r, title="Favourite Games", talign=table.alignment.RIGHT),
+   table.table(r, vpad=3)
 ]
 
 tbls[0].display()
