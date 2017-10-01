@@ -3,8 +3,8 @@ from distutils.core import setup
 
 setup(
    name = 'PyTable',
-   packages = ['table'],
-   version = '0.1.26',
+   packages = ['PyTable'],
+   version = '0.1.27',
    description = 'A table module for python',
    author = 'Evan Young',
    url = 'https://github.com/DocCodes/PyTable',

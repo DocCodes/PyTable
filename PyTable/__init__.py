@@ -7,7 +7,7 @@ __copyright__ = 'Copyright 2017, Evan Young'
 __credits__ = 'Evan Young'
 
 __license__ = 'GNU GPLv3'
-__version__ = '0.1.26'
+__version__ = '0.1.27'
 __maintainer__ = 'Evan Young'
 __status__ = 'Alpha'
 
