@@ -3,7 +3,6 @@
 [![Build Status](https://img.shields.io/travis/DocCodes/PyTable.svg)](https://travis-ci.org/DocCodes/PyTable)
 [![Release](https://img.shields.io/github/release/doccodes/pytable.svg?)](https://github.com/doccodes/pytable)
 [![Beta](https://img.shields.io/github/release/doccodes/pytable/all.svg?label=nightly)](https://github.com/doccodes/pytable/releases)
-[![License](https://img.shields.io/github/license/doccodes/pytable.svg)](https://github.com/DocCodes/pytable/blob/master/LICENSE)
 
 ## Installation
 1. First download this git
