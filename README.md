@@ -1,7 +1,8 @@
 # PyTable
 
-[![Build Status](https://img.shields.io/travis/DocCodes/PyTable.svg)](https://travis-ci.org/DocCodes/pytable)
-[![Alpha](https://img.shields.io/badge/beta-0.1.22-blue.svg)](https://github.com/DocCodes/pytable)
+[![Build Status](https://img.shields.io/travis/doccodes/pytable.svg)](https://travis-ci.org/doccodes/pytable)
+[![Release](https://img.shields.io/github/release/doccodes/pytable.svg?)](https://github.com/doccodes/pytable)
+[![Beta](https://img.shields.io/github/release/doccodes/pytable/all.svg?label=nightly)](https://github.com/doccodes/pytable/releases)
 
 ## Installation
 1. First download this git
