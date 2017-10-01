@@ -1,7 +1,7 @@
 # PyTable
 
 [![Build Status](https://img.shields.io/travis/DocCodes/PyTable.svg)](https://travis-ci.org/DocCodes/PyTable)
-[![Release](https://img.shields.io/github/release/doccodes/pytable.svg?)](https://github.com/doccodes/pytable)
+[![Release](https://img.shields.io/github/release/doccodes/pytable.svg?)](https://github.com/doccodes/pytable/releases)
 [![Beta](https://img.shields.io/github/release/doccodes/pytable/all.svg?label=nightly)](https://github.com/doccodes/pytable/releases)
 
 ## Installation
