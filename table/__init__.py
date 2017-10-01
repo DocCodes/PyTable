@@ -7,7 +7,7 @@ __copyright__ = 'Copyright 2017, Evan Young'
 __credits__ = 'Evan Young'
 
 __license__ = 'GNU GPLv3'
-__version__ = '0.1.25'
+__version__ = '0.1.26'
 __maintainer__ = 'Evan Young'
 __status__ = 'Alpha'
 
@@ -24,7 +24,7 @@ class table:
    
    The table object, supports rows, formatting, delimiters, an borders
    """
-   def __init__(self, rows, align="default", delim=" ", colbd="|", rowbd="-", title="", talign=alignment.CENTER, hpad=1, vpad=0):
+   def __init__(self, rows, align="default", delim=" ", colbd="|", rowbd="-", title="", talign=alignment.CENTER, hpad=2, vpad=0):
       """The main function
       
       Does all the heavy lifting
@@ -39,7 +39,7 @@ class table:
          rowbd   {str}   -- The row border                                         (default: {"-"})
          title   {str}   -- The table's title                                      (default: {""})
          talign  {str}   -- The table's title alignment                            (default: {alignment.CENTER})
-         hpad    {int}   -- The horizontal spacing between each cell               (default: {1})
+         hpad    {int}   -- The horizontal spacing between each cell               (default: {2})
          vpad    {int}   -- The vertical spacing between each cell                 (default: {0})
       """
 
